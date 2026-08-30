@@ -1,4 +1,8 @@
 .DS_Store
 *.swp
 *.tmp
-
+website/node_modules/
+website/dist/
+website/*.tsbuildinfo
+website/vite.config.js
+website/vite.config.d.ts

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">StatusPerch quick-start workflow</title>
+  <desc id="desc">Three steps show how to arrange, hide, and reveal menu bar items.</desc>
+  <style>
+    :root { --canvas:#f4f6f9; --card:#fff; --ink:#18212f; --muted:#687386; --line:#dfe4ec; --bar:#1d222b; --barInk:#f7f9fc; --cyan:#13b8e9; --blue:#1769e0; }
+    @media (prefers-color-scheme: dark) { :root { --canvas:#11141a; --card:#1b2029; --ink:#f3f6fb; --muted:#aab4c4; --line:#343c49; --bar:#080a0e; --barInk:#f7f9fc; --cyan:#38c7ee; --blue:#70a5ff; } }
+    text { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif; fill:var(--ink); }
+    .muted { fill:var(--muted); }
+    .card { fill:var(--card); stroke:var(--line); stroke-width:1.5; }
+    .bar { fill:var(--bar); }
+    .barText { fill:var(--barInk); }
+    .step { fill:var(--blue); }
+    .stepText { fill:white; font-weight:700; }
+    .label { font-size:22px; font-weight:700; }
+    .body { font-size:16px; }
+  </style>
+  <rect width="1200" height="560" rx="28" fill="var(--canvas)"/>
+  <text x="54" y="66" font-size="30" font-weight="760">Quick start · 快速上手</text>
+  <text x="54" y="96" font-size="16" class="muted">Native macOS ordering, one-click collection · 使用 macOS 原生排列，一键收纳</text>
+
+  <g transform="translate(42 124)">
+    <rect class="card" width="350" height="390" rx="24"/>
+    <circle class="step" cx="34" cy="36" r="18"/><text class="stepText" x="34" y="42" text-anchor="middle" font-size="18">1</text>
+    <text class="label" x="64" y="43">Arrange · 排列</text>
+    <rect class="bar" x="22" y="80" width="306" height="54" rx="14"/>
+    <circle cx="50" cy="107" r="8" fill="#ffcc4d"/>
+    <rect x="74" y="99" width="17" height="17" rx="4" fill="#79d48c"/>
+    <path d="M113 116l9-18 9 18z" fill="#a9a4ff"/>
+    <line x1="153" y1="94" x2="153" y2="120" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M190 99l-8 8 8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="barText" x="242" y="113" font-size="15">09:41</text>
+    <path d="M52 158h101" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M153 151l8 7-8 7" fill="none" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="22" y="205" class="body">Hold Command and drag:</text>
+    <text x="22" y="232" class="body">按住 Command 拖动：</text>
+    <text x="22" y="272" class="muted body">Low-frequency items</text>
+    <text x="22" y="296" class="muted body">低频图标</text>
+    <text x="184" y="272" class="muted body">Clock stays visible</text>
+    <text x="184" y="296" class="muted body">时钟保持显示</text>
+    <text x="22" y="350" class="muted" font-size="14">items → divider → chevron → clock</text>
+  </g>
+
+  <g transform="translate(425 124)">
+    <rect class="card" width="350" height="390" rx="24"/>
+    <circle class="step" cx="34" cy="36" r="18"/><text class="stepText" x="34" y="42" text-anchor="middle" font-size="18">2</text>
+    <text class="label" x="64" y="43">Hide · 收起</text>
+    <rect class="bar" x="22" y="80" width="306" height="54" rx="14"/>
+    <path d="M207 99l8 8-8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="barText" x="242" y="113" font-size="15">09:41</text>
+    <circle cx="211" cy="107" r="22" fill="none" stroke="var(--cyan)" stroke-width="3"/>
+    <path d="M211 151v-17" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M204 141l7-7 7 7" fill="none" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="22" y="205" class="body">Click the chevron once.</text>
+    <text x="22" y="232" class="body">单击箭头。</text>
+    <text x="22" y="282" class="muted body">Collected items move out of view;</text>
+    <text x="22" y="307" class="muted body">the clock and frequent items remain.</text>
+    <text x="22" y="340" class="muted body">收纳区移出视野，常驻区不变。</text>
+  </g>
+
+  <g transform="translate(808 124)">
+    <rect class="card" width="350" height="390" rx="24"/>
+    <circle class="step" cx="34" cy="36" r="18"/><text class="stepText" x="34" y="42" text-anchor="middle" font-size="18">3</text>
+    <text class="label" x="64" y="43">Reveal · 展开</text>
+    <rect class="bar" x="22" y="80" width="306" height="54" rx="14"/>
+    <circle cx="50" cy="107" r="8" fill="#ffcc4d"/>
+    <rect x="74" y="99" width="17" height="17" rx="4" fill="#79d48c"/>
+    <path d="M113 116l9-18 9 18z" fill="#a9a4ff"/>
+    <line x1="153" y1="94" x2="153" y2="120" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M190 99l-8 8 8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="barText" x="242" y="113" font-size="15">09:41</text>
+    <circle cx="184" cy="107" r="22" fill="none" stroke="var(--cyan)" stroke-width="3"/>
+    <path d="M184 151v-17" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M177 141l7-7 7 7" fill="none" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="22" y="205" class="body">Click again to restore the items.</text>
+    <text x="22" y="232" class="body">再次单击即可恢复。</text>
+    <text x="22" y="282" class="muted body">Your manual order is preserved.</text>
+    <text x="22" y="307" class="muted body">可选 5 / 10 / 30 秒自动收起。</text>
+    <text x="22" y="350" class="muted" font-size="14">No Screen Recording · 无需屏幕录制</text>
+  </g>
+</svg>

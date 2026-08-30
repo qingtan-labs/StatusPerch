@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">StatusPerch settings and language switcher</title>
+  <desc id="desc">A diagram of the StatusPerch context menu and English, Simplified Chinese, and Follow System choices.</desc>
+  <style>
+    :root { --canvas:#f4f6f9; --panel:#fff; --ink:#17202e; --muted:#6c7788; --line:#dfe4ec; --select:#1769e0; --soft:#eaf2ff; --cyan:#13b8e9; }
+    @media (prefers-color-scheme: dark) { :root { --canvas:#11141a; --panel:#20252e; --ink:#f5f7fb; --muted:#adb6c4; --line:#3a424f; --select:#70a5ff; --soft:#263856; --cyan:#38c7ee; } }
+    text { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif; fill:var(--ink); }
+    .panel { fill:var(--panel); stroke:var(--line); stroke-width:1.5; }
+    .muted { fill:var(--muted); }
+    .item { font-size:18px; }
+    .small { font-size:15px; }
+  </style>
+  <rect width="1200" height="620" rx="28" fill="var(--canvas)"/>
+  <text x="54" y="66" font-size="30" font-weight="760">Settings &amp; language · 设置与语言</text>
+  <text x="54" y="98" font-size="16" class="muted">Right-click the chevron for settings · 右键箭头打开设置</text>
+
+  <g transform="translate(80 138)">
+    <rect class="panel" width="470" height="424" rx="18"/>
+    <text class="item" x="28" y="45">Hide Menu Bar Items</text>
+    <text class="muted small" x="28" y="69">收起菜单栏图标</text>
+    <text class="item" x="28" y="111">Arrange Menu Bar Items…</text>
+    <text class="muted small" x="28" y="135">排列菜单栏图标…</text>
+    <line x1="20" y1="158" x2="450" y2="158" stroke="var(--line)"/>
+    <text class="item" x="28" y="200">Auto-Hide After Expanding</text>
+    <text class="muted small" x="28" y="224">展开后自动收起</text>
+    <text x="430" y="208" text-anchor="middle" font-size="22">›</text>
+    <text class="item" x="28" y="266">Launch at Login</text>
+    <text class="muted small" x="28" y="290">登录时自动启动</text>
+    <rect x="16" y="314" width="438" height="62" rx="10" fill="var(--soft)"/>
+    <text class="item" x="28" y="340">Language</text>
+    <text class="muted small" x="28" y="363">语言</text>
+    <text x="430" y="352" text-anchor="middle" font-size="22">›</text>
+    <line x1="20" y1="392" x2="450" y2="392" stroke="var(--line)"/>
+    <text class="item" x="28" y="417">Quit StatusPerch / 退出 StatusPerch</text>
+  </g>
+
+  <path d="M550 452h70" stroke="var(--cyan)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M610 443l11 9-11 9" fill="none" stroke="var(--cyan)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(620 272)">
+    <rect class="panel" width="420" height="250" rx="18"/>
+    <path d="M30 51l7 7 14-17" fill="none" stroke="var(--select)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="item" x="70" y="59">Follow System</text>
+    <text class="muted small" x="70" y="82">跟随系统</text>
+    <line x1="20" y1="103" x2="400" y2="103" stroke="var(--line)"/>
+    <text class="item" x="70" y="146">English</text>
+    <text class="muted small" x="70" y="169">Choose English explicitly</text>
+    <line x1="20" y1="187" x2="400" y2="187" stroke="var(--line)"/>
+    <text class="item" x="70" y="228">简体中文</text>
+    <text class="muted small" x="190" y="228">切换为中文</text>
+  </g>
+
+  <text x="620" y="196" font-size="22" font-weight="700">Three interface modes</text>
+  <text x="620" y="229" font-size="17" class="muted">Follow System · English · 简体中文</text>
+  <text x="80" y="594" font-size="15" class="muted">The documentation opens in English by default; use the language links at the top to switch. · 文档默认显示英文，可通过顶部语言入口切换。</text>
+</svg>

@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://statusperch.r9rgtcrw5g.chatgpt.site"><strong>Product website</strong></a>
+  <a href="https://qingtan-labs.github.io/StatusPerch/"><strong>Product website</strong></a>
   ·
   <a href="https://github.com/qingtan-labs/StatusPerch/releases/latest"><strong>Download the latest release</strong></a>
   ·
