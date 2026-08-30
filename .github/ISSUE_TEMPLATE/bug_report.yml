@@ -1,0 +1,51 @@
+name: Bug report
+description: Report a reproducible StatusPerch problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove private information from screenshots and logs.
+  - type: input
+    id: version
+    attributes:
+      label: StatusPerch version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac architecture
+      placeholder: macOS 15.x, Apple silicon
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include what you expected and what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Display and menu-bar environment
+      description: Mention external displays, notch, other menu-bar managers, and relevant settings.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I installed the latest official release from this repository.
+          required: true
+        - label: I have removed passwords, tokens, and private information.
+          required: true
+
