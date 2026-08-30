@@ -27,7 +27,7 @@
     <rect x="74" y="99" width="17" height="17" rx="4" fill="#79d48c"/>
     <path d="M113 116l9-18 9 18z" fill="#a9a4ff"/>
     <line x1="153" y1="94" x2="153" y2="120" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-    <path d="M176 101l8 8 8-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190 99l-8 8 8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text class="barText" x="242" y="113" font-size="15">09:41</text>
     <path d="M52 158h101" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/>
     <path d="M153 151l8 7-8 7" fill="none" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,7 +45,7 @@
     <circle class="step" cx="34" cy="36" r="18"/><text class="stepText" x="34" y="42" text-anchor="middle" font-size="18">2</text>
     <text class="label" x="64" y="43">Hide · 收起</text>
     <rect class="bar" x="22" y="80" width="306" height="54" rx="14"/>
-    <path d="M203 113l8-8 8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M207 99l8 8-8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text class="barText" x="242" y="113" font-size="15">09:41</text>
     <circle cx="211" cy="107" r="22" fill="none" stroke="var(--cyan)" stroke-width="3"/>
     <path d="M211 151v-17" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/>
@@ -66,7 +66,7 @@
     <rect x="74" y="99" width="17" height="17" rx="4" fill="#79d48c"/>
     <path d="M113 116l9-18 9 18z" fill="#a9a4ff"/>
     <line x1="153" y1="94" x2="153" y2="120" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-    <path d="M176 101l8 8 8-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190 99l-8 8 8 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text class="barText" x="242" y="113" font-size="15">09:41</text>
     <circle cx="184" cy="107" r="22" fill="none" stroke="var(--cyan)" stroke-width="3"/>
     <path d="M184 151v-17" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/>
@@ -78,4 +78,3 @@
     <text x="22" y="350" class="muted" font-size="14">No Screen Recording · 无需屏幕录制</text>
   </g>
 </svg>
-
