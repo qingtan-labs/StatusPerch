@@ -24,7 +24,7 @@
 
 StatusPerch 是一款轻量、原生的 macOS 菜单栏收纳工具。它在菜单栏中放置一个可移动边界：将低频图标移动到边界左侧，即可通过箭头一键收起或展开。
 
-![StatusPerch 排列、收起与展开示意图](assets/screenshots/usage-workflow.svg)
+![StatusPerch 左右箭头的排列、收起与展开示意图](assets/screenshots/usage-workflow-horizontal-v2.svg)
 
 ## 下载
 
