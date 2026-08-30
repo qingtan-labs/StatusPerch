@@ -1,5 +1,9 @@
 # StatusPerch
 
+**Language:** English · [简体中文](README.zh-Hans.md)
+
+> English is the default language for this repository and its documentation entry page. StatusPerch itself can follow the macOS language or be switched explicitly between English and Simplified Chinese.
+
 <p align="center">
   <img src="assets/StatusPerch-icon.png" width="160" height="160" alt="StatusPerch app icon">
 </p>
@@ -19,6 +23,8 @@
 </p>
 
 StatusPerch is a compact native macOS utility that places a movable boundary in the menu bar. Put low-frequency status items to the left of the boundary, then hide or reveal them with one click.
+
+![StatusPerch arrange, hide, and reveal workflow](assets/screenshots/usage-workflow.svg)
 
 ## Download
 
@@ -51,6 +57,10 @@ The checksum is also provided as a separate `SHA256SUMS` file on the [Releases p
 4. Hold Command and drag the chevron and boundary to the desired positions.
 5. Move items you want to collect to the left of the boundary.
 6. Click the chevron to hide or reveal the collected area.
+
+Right-click the chevron to configure auto-hide, Launch at Login, language, help, or quit.
+
+![StatusPerch settings and language choices](assets/screenshots/language-settings.svg)
 
 StatusPerch uses the ordering behavior provided by macOS. Some Apple system items and third-party apps may not support Command-drag. macOS does not provide a general public API for displaying arbitrary third-party status items in a true second row; StatusPerch therefore focuses on reliable native hiding rather than simulating one.
 
