@@ -5,7 +5,7 @@
 > 仓库与文档入口默认显示英文，可通过顶部语言入口切换为简体中文。StatusPerch 应用界面支持“跟随系统、English、简体中文”三种模式。
 
 <p align="center">
-  <img src="assets/StatusPerch-icon.png" width="160" height="160" alt="StatusPerch 应用图标">
+  <img src="assets/statusperch-social-preview.png" width="1280" alt="StatusPerch — 给 Mac 菜单栏留出更多空间">
 </p>
 
 <p align="center"><strong>让 macOS 菜单栏更安静。</strong></p>

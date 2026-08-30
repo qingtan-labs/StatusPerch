@@ -14,13 +14,14 @@ import {
   TimerReset,
   WifiOff,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Language = 'en' | 'zh';
 
 const copy = {
   en: {
     nav: ['How it works', 'Privacy', 'Features', 'Download'],
+    navLabel: 'Primary navigation',
     lang: '中文',
     languageLabel: '切换到中文',
     eyebrow: 'A calmer Mac menu bar',
@@ -34,6 +35,13 @@ const copy = {
     before: 'Before',
     after: 'After',
     heroNote: 'Your clock and everyday icons stay visible.',
+    heroVisualLabel: 'StatusPerch menu bar before and after illustration',
+    principlesLabel: 'Product principles',
+    principles: ['Permission-free', '100% offline', 'Universal 2'],
+    showcaseEyebrow: 'Designed for calm',
+    showcaseBody:
+      'A small utility with a quiet presence — clear enough to trust, subtle enough to live in your menu bar every day.',
+    showcaseAlt: 'StatusPerch brand preview with the app icon and a simplified Mac menu bar',
     howEyebrow: 'Native by design',
     howTitle: 'Three steps. Zero new habits.',
     howIntro:
@@ -76,27 +84,36 @@ const copy = {
     limitsBody:
       'Some macOS system icons cannot be moved with Command-drag. StatusPerch uses the native menu bar and does not create a second row.',
     footer: 'A focused macOS utility by qingtan-labs.',
+    footerLinks: ['GitHub', 'Releases', 'Privacy'],
   },
   zh: {
     nav: ['使用方法', '隐私', '功能', '下载'],
+    navLabel: '主要导航',
     lang: 'English',
     languageLabel: 'Switch to English',
-    eyebrow: '让 Mac 菜单栏更从容',
-    titleA: '给你的 Mac 菜单栏',
-    titleB: '腾出空间。',
-    intro: '一键收起并整理菜单栏图标。轻量、离线、注重隐私，并且无需系统权限。',
+    eyebrow: '给菜单栏留一点呼吸',
+    titleA: '让常用图标留下，',
+    titleB: '让杂乱安静退场。',
+    intro: '一键收好不常用的菜单栏图标。轻量、离线、不索取系统权限，也不打扰你的工作节奏。',
     download: '下载 v1.0.0',
     github: '前往 GitHub',
     specs: ['macOS 13+', 'Apple 芯片 + Intel', '免费开源'],
     before: '收起前',
     after: '收起后',
     heroNote: '时钟和常用图标始终保持可见。',
+    heroVisualLabel: 'StatusPerch 菜单栏收起前后示意图',
+    principlesLabel: '产品原则',
+    principles: ['无需系统权限', '完全离线运行', '双架构支持'],
+    showcaseEyebrow: '把秩序藏进细节里',
+    showcaseBody:
+      '不抢注意力，也不改变习惯。StatusPerch 只在你需要时出现，让每天都要看的菜单栏更清爽一点。',
+    showcaseAlt: 'StatusPerch 品牌预览图，包含应用图标与简化后的 Mac 菜单栏',
     howEyebrow: '遵循 macOS 原生逻辑',
-    howTitle: '三个步骤，无需改变习惯。',
-    howIntro: 'StatusPerch 使用 macOS 自带的菜单栏排列方式，简单、稳定、容易理解。',
+    howTitle: '三步整理好，\n不打扰你的习惯。',
+    howIntro: '沿用 macOS 熟悉的排列方式，不学习新操作，也不增加新的负担。',
     workflowAlt: '三个步骤完成菜单栏图标排列、收起和展开',
     privacyEyebrow: '隐私优先',
-    privacyTitle: '你的菜单栏，只属于你。',
+    privacyTitle: '安静地工作，\n也认真守护隐私。',
     privacyIntro:
       '不截屏、不需要云端账户，也没有后台分析。StatusPerch 只控制自己的分隔线和箭头。',
     privacyCards: [
@@ -105,7 +122,7 @@ const copy = {
       ['无需联网', '所有设置仅保存在你的 Mac 本地。'],
     ],
     featureEyebrow: '小工具，细节不小',
-    featureTitle: '融入日常，用完即隐身。',
+    featureTitle: '轻一点，顺手一点，\n也贴心一点。',
     features: [
       ['一键收纳', '单击箭头，收起或展开低频图标。'],
       ['原生排序', '按住 Command 拖动，保留你设定的顺序。'],
@@ -115,10 +132,10 @@ const copy = {
       ['亮色与暗色', '自动适配系统外观，始终自然清晰。'],
     ],
     languageTitle: '面向全球用户的语言体验。',
-    languageBody: '网站默认使用英文，应用可跟随 Mac 系统，也可以手动选择语言。',
+    languageBody: '网站默认使用英文，应用既能跟随 Mac，也可以记住你手动选择的语言。',
     languageAlt: 'StatusPerch 语言设置',
     downloadEyebrow: '现在开始',
-    downloadTitle: '让菜单栏重新呼吸。',
+    downloadTitle: '给每天都要看的菜单栏，\n留一点从容。',
     downloadIntro: '适用于 Apple 芯片与 Intel Mac，需要 macOS 13 Ventura 或更高版本。',
     getDmg: '下载 DMG',
     releaseNotes: '版本说明',
@@ -130,6 +147,7 @@ const copy = {
     limitsBody:
       '部分 macOS 系统图标不支持按住 Command 拖动。StatusPerch 使用原生菜单栏，不会创建第二行菜单栏。',
     footer: 'qingtan-labs 打造的专注型 macOS 工具。',
+    footerLinks: ['GitHub', '版本发布', '隐私'],
   },
 } as const;
 
@@ -160,23 +178,29 @@ function MenuBarDemo({ compact = false }: { compact?: boolean }) {
 }
 
 export default function App() {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(() =>
+    window.localStorage.getItem('statusperch-language') === 'zh' ? 'zh' : 'en',
+  );
   const t = copy[language];
+
+  useEffect(() => {
+    document.documentElement.lang = language === 'zh' ? 'zh-Hans' : 'en';
+  }, [language]);
 
   const toggleLanguage = () => {
     const next = language === 'en' ? 'zh' : 'en';
     setLanguage(next);
-    document.documentElement.lang = next === 'zh' ? 'zh-Hans' : 'en';
+    window.localStorage.setItem('statusperch-language', next);
   };
 
   return (
-    <main>
+    <main className={`site-page ${language === 'zh' ? 'is-zh' : 'is-en'}`}>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="StatusPerch home">
           <img src={asset('statusperch-icon.png')} alt="" width="512" height="512" />
           <span>StatusPerch</span>
         </a>
-        <nav aria-label="Primary navigation">
+        <nav aria-label={t.navLabel}>
           {t.nav.map((item, index) => (
             <a key={item} href={`#${['how', 'privacy', 'features', 'download'][index]}`}>
               {item}
@@ -212,7 +236,7 @@ export default function App() {
           </ul>
         </div>
 
-        <div className="hero-visual" aria-label="StatusPerch menu bar before and after illustration">
+        <div className="hero-visual" aria-label={t.heroVisualLabel}>
           <div className="visual-glow" />
           <div className="mac-window">
             <div className="window-top">
@@ -236,10 +260,20 @@ export default function App() {
         </div>
       </section>
 
-      <section className="trust-strip" aria-label="Product principles">
-        <div><ShieldCheck size={20} /><span>Permission-free</span></div>
-        <div><WifiOff size={20} /><span>100% offline</span></div>
-        <div><Globe2 size={20} /><span>Universal 2</span></div>
+      <section className="trust-strip" aria-label={t.principlesLabel}>
+        <div><ShieldCheck size={20} /><span>{t.principles[0]}</span></div>
+        <div><WifiOff size={20} /><span>{t.principles[1]}</span></div>
+        <div><Globe2 size={20} /><span>{t.principles[2]}</span></div>
+      </section>
+
+      <section className="brand-showcase section-shell" aria-labelledby="brand-showcase-title">
+        <div className="brand-showcase-copy">
+          <p className="eyebrow"><span />{t.showcaseEyebrow}</p>
+          <p id="brand-showcase-title">{t.showcaseBody}</p>
+        </div>
+        <div className="brand-showcase-frame">
+          <img src={asset('og.png')} alt={t.showcaseAlt} width="1280" height="640" />
+        </div>
       </section>
 
       <section className="content-section section-shell" id="how">
@@ -321,9 +355,9 @@ export default function App() {
         </div>
         <p>{t.footer}</p>
         <div>
-          <a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a>
-          <a href={`${githubUrl}/releases`} target="_blank" rel="noreferrer">Releases</a>
-          <a href={`${githubUrl}#privacy`} target="_blank" rel="noreferrer">Privacy</a>
+          <a href={githubUrl} target="_blank" rel="noreferrer">{t.footerLinks[0]}</a>
+          <a href={`${githubUrl}/releases`} target="_blank" rel="noreferrer">{t.footerLinks[1]}</a>
+          <a href="#privacy">{t.footerLinks[2]}</a>
         </div>
       </footer>
     </main>

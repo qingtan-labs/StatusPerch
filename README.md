@@ -5,7 +5,7 @@
 > English is the default language for this repository and its documentation entry page. StatusPerch itself can follow the macOS language or be switched explicitly between English and Simplified Chinese.
 
 <p align="center">
-  <img src="assets/StatusPerch-icon.png" width="160" height="160" alt="StatusPerch app icon">
+  <img src="assets/statusperch-social-preview.png" width="1280" alt="StatusPerch — Make room in your Mac menu bar">
 </p>
 
 <p align="center"><strong>A quieter menu bar for macOS.</strong></p>
