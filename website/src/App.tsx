@@ -167,6 +167,7 @@ const privacyIcons = [ShieldCheck, LockKeyhole, WifiOff];
 const downloadUrl =
   'https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.0/StatusPerch-1.0.0-Universal.dmg';
 const githubUrl = 'https://github.com/qingtan-labs/StatusPerch';
+const fazierUrl = 'https://fazier.com';
 const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
 
 function MenuBarDemo({ compact = false }: { compact?: boolean }) {
@@ -391,10 +392,13 @@ export default function App() {
           <span>StatusPerch</span>
         </div>
         <p>{t.footer}</p>
-        <div>
+        <div className="footer-links">
           <a href={githubUrl} target="_blank" rel="noreferrer">{t.footerLinks[0]}</a>
           <a href={`${githubUrl}/releases`} target="_blank" rel="noreferrer">{t.footerLinks[1]}</a>
           <a href="#privacy">{t.footerLinks[2]}</a>
+          <a className="fazier-badge" href={fazierUrl} target="_blank" rel="noreferrer" aria-label="Launched on Fazier">
+            <img src="https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=neutral" alt="Launched on Fazier" width="130" height="30" />
+          </a>
         </div>
       </footer>
     </main>
