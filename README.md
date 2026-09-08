@@ -26,6 +26,10 @@
 
 StatusPerch is a compact native macOS utility that places a movable boundary in the menu bar. Put low-frequency status items to the left of the boundary, then hide or reveal them with one click.
 
+> Setup order: occasional apps → divider → chevron → clock and always-visible controls.
+
+![Animated StatusPerch menu bar collection demo](assets/statusperch-menu-bar-demo.gif)
+
 ![StatusPerch horizontal chevron workflow: arrange, hide, and reveal](assets/screenshots/usage-workflow-horizontal-v2.svg)
 
 ## Download

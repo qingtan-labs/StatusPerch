@@ -2,6 +2,7 @@ import {
   ArrowRight,
   Check,
   ChevronLeft,
+  ChevronRight,
   Command,
   CodeXml,
   Download,
@@ -31,7 +32,7 @@ const copy = {
       'Hide and organize menu bar icons with one click. Lightweight, offline, privacy-friendly, and permission-free.',
     download: 'Download v1.0.0',
     github: 'View on GitHub',
-    specs: ['macOS 13+', 'Apple silicon + Intel', 'Free & open source'],
+    specs: ['macOS 13+', 'Apple silicon + Intel', 'Free to use'],
     before: 'Before',
     after: 'After',
     heroNote: 'Your clock and everyday icons stay visible.',
@@ -42,6 +43,11 @@ const copy = {
     showcaseBody:
       'A small utility with a quiet presence — clear enough to trust, subtle enough to live in your menu bar every day.',
     showcaseAlt: 'StatusPerch brand preview with the app icon and a simplified Mac menu bar',
+    motionEyebrow: 'See it in motion',
+    motionTitle: 'Collect first. Then click.',
+    motionBody:
+      'Place low-frequency items to the left of the divider, keep the chevron on its right, and click to hide or reveal the collected area.',
+    motionAlt: 'StatusPerch hiding and revealing collected menu bar icons',
     howEyebrow: 'Native by design',
     howTitle: 'Three steps. Zero new habits.',
     howIntro:
@@ -97,7 +103,7 @@ const copy = {
     intro: '一键收好不常用的菜单栏图标。轻量、离线、不索取系统权限，也不打扰你的工作节奏。',
     download: '下载 v1.0.0',
     github: '前往 GitHub',
-    specs: ['macOS 13+', 'Apple 芯片 + Intel', '免费开源'],
+    specs: ['macOS 13+', 'Apple 芯片 + Intel', '免费使用'],
     before: '收起前',
     after: '收起后',
     heroNote: '时钟和常用图标始终保持可见。',
@@ -108,6 +114,11 @@ const copy = {
     showcaseBody:
       '不抢注意力，也不改变习惯。StatusPerch 只在你需要时出现，让每天都要看的菜单栏更清爽一点。',
     showcaseAlt: 'StatusPerch 品牌预览图，包含应用图标与简化后的 Mac 菜单栏',
+    motionEyebrow: '看看它如何工作',
+    motionTitle: '先放对位置，再单击收纳。',
+    motionBody:
+      '把低频图标放在小竖线左侧，箭头紧邻小竖线右侧；单击箭头，即可收起或恢复整个收纳区。',
+    motionAlt: 'StatusPerch 收起并恢复菜单栏收纳区图标的动画演示',
     howEyebrow: '遵循 macOS 原生逻辑',
     howTitle: '三步整理好，\n不打扰你的习惯。',
     howIntro: '沿用 macOS 熟悉的排列方式，不学习新操作，也不增加新的负担。',
@@ -171,7 +182,9 @@ function MenuBarDemo({ compact = false }: { compact?: boolean }) {
         )}
       </div>
       <span className="demo-divider" />
-      <ChevronLeft size={17} strokeWidth={2.4} />
+      {compact
+        ? <ChevronRight size={17} strokeWidth={2.4} />
+        : <ChevronLeft size={17} strokeWidth={2.4} />}
       <span className="demo-clock">09:41</span>
     </div>
   );
@@ -273,6 +286,30 @@ export default function App() {
         </div>
         <div className="brand-showcase-frame">
           <img src={asset('og.png')} alt={t.showcaseAlt} width="1280" height="640" />
+        </div>
+      </section>
+
+      <section className="motion-showcase section-shell" aria-labelledby="motion-showcase-title">
+        <div className="motion-showcase-copy">
+          <p className="eyebrow"><span />{t.motionEyebrow}</p>
+          <h2 id="motion-showcase-title">{t.motionTitle}</h2>
+          <p>{t.motionBody}</p>
+        </div>
+        <div className="motion-showcase-frame">
+          <img
+            className="motion-animation"
+            src={asset('statusperch-menu-bar-demo.gif')}
+            alt={t.motionAlt}
+            width="960"
+            height="540"
+          />
+          <img
+            className="motion-static"
+            src={asset('usage-workflow.svg')}
+            alt={t.workflowAlt}
+            width="1200"
+            height="560"
+          />
         </div>
       </section>
 

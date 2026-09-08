@@ -106,6 +106,15 @@ section[id] { scroll-margin-top: 100px; }
 .brand-showcase-frame::after { content: ''; position: absolute; inset: auto 12% -20px; height: 40px; border-radius: 50%; background: rgba(24,185,223,.2); filter: blur(24px); }
 .brand-showcase-frame img { position: relative; z-index: 1; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 19px; }
 
+.motion-showcase { display: grid; grid-template-columns: .56fr 1.44fr; align-items: center; gap: 60px; padding-block: 84px 10px; }
+.motion-showcase-copy h2 { margin: 0; font-size: clamp(34px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -.042em; }
+.motion-showcase-copy > p:last-child { margin: 21px 0 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.motion-showcase-frame { position: relative; padding: 10px; overflow: hidden; border: 1px solid var(--line); border-radius: 27px; background: color-mix(in srgb, var(--surface) 92%, transparent); box-shadow: 0 24px 65px rgba(47,41,34,.12); }
+.motion-showcase-frame::after { content: ''; position: absolute; inset: auto 15% -18px; height: 36px; border-radius: 50%; background: rgba(24,185,223,.18); filter: blur(22px); pointer-events: none; }
+.motion-showcase-frame img { display: block; width: 100%; }
+.motion-showcase-frame img { position: relative; z-index: 1; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 19px; }
+.motion-showcase-frame .motion-static { display: none; }
+
 .content-section { padding-block: 112px; }
 .section-heading { max-width: 730px; margin-bottom: 44px; }
 .section-heading.centered { margin-inline: auto; text-align: center; }
@@ -171,7 +180,7 @@ section[id] { scroll-margin-top: 100px; }
   .site-header { background: color-mix(in srgb, var(--surface) 84%, transparent); }
   .visual-stage { background: linear-gradient(145deg, #202329, #151c21); }
   .window-top { color: #8f918e; }
-  .brand-showcase-frame, .workflow-frame { background: #14191e; }
+  .brand-showcase-frame, .motion-showcase-frame, .workflow-frame { background: #14191e; }
   .feature-grid article:nth-child(n) { background: var(--surface); }
   .feature-grid article:nth-child(2), .feature-grid article:nth-child(6) { background: color-mix(in srgb, var(--surface) 91%, #1d4551); }
   .feature-grid article:nth-child(3), .feature-grid article:nth-child(4) { background: color-mix(in srgb, var(--surface) 91%, #4b3621); }
@@ -184,8 +193,8 @@ section[id] { scroll-margin-top: 100px; }
   .hero { grid-template-columns: 1fr; gap: 30px; padding-top: 70px; }
   .hero-copy { padding-left: 0; }
   .hero-visual { min-height: 470px; }
-  .brand-showcase { grid-template-columns: 1fr; gap: 30px; }
-  .brand-showcase-copy { max-width: 680px; }
+  .brand-showcase, .motion-showcase { grid-template-columns: 1fr; gap: 30px; }
+  .brand-showcase-copy, .motion-showcase-copy { max-width: 680px; }
   .privacy-layout, .language-showcase { grid-template-columns: 1fr; gap: 45px; }
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .site-footer { grid-template-columns: 1fr 1fr; }
@@ -215,8 +224,10 @@ section[id] { scroll-margin-top: 100px; }
   .trust-strip { justify-content: flex-start; gap: 15px 22px; flex-wrap: wrap; padding: 22px 26px; }
   .trust-strip div { width: calc(50% - 12px); }
   .brand-showcase { padding-block: 78px 8px; }
-  .brand-showcase-frame { padding: 6px; border-radius: 20px; }
-  .brand-showcase-frame img { border-radius: 15px; }
+  .brand-showcase-frame, .motion-showcase-frame { padding: 6px; border-radius: 20px; }
+  .brand-showcase-frame img, .motion-showcase-frame img { border-radius: 15px; }
+  .motion-showcase { padding-block: 66px 0; }
+  .motion-showcase-copy h2 { font-size: clamp(34px, 10vw, 46px); }
   .content-section { padding-block: 82px; }
   .privacy-layout { padding-block: 82px; gap: 48px; }
   .section-heading h2, .privacy-copy h2, .download-main h2 { font-size: clamp(35px, 10.5vw, 48px); }
@@ -236,4 +247,6 @@ section[id] { scroll-margin-top: 100px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+  .motion-showcase-frame .motion-animation { display: none; }
+  .motion-showcase-frame .motion-static { display: block; aspect-ratio: auto; object-fit: contain; }
 }
