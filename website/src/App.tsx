@@ -298,7 +298,7 @@ export default function App() {
         <div className="motion-showcase-frame">
           <img
             className="motion-animation"
-            src={asset('statusperch-menu-bar-demo.gif')}
+            src={asset('statusperch-menu-bar-demo.gif?v=1358bfb')}
             alt={t.motionAlt}
             width="960"
             height="540"
