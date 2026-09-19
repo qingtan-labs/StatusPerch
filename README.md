@@ -44,7 +44,7 @@ The checksum is also provided as a separate `SHA256SUMS` file on the [Releases p
 
 > **Current signing status:** 1.0.1 is ad-hoc signed but not Apple-notarized. For the first launch, Control-click StatusPerch in Applications and choose **Open**. Never disable Gatekeeper. See the [safe installation guide](docs/user-manual/en/1-installation.md).
 
-> **macOS 27:** Version 1.0.1 restores collection for Apple's redesigned menu bar. After upgrading, Command-drag the divider, chevron, and collected items into order once. Hidden items move into the system `«` overflow area while collapsed.
+> **macOS 27:** Version 1.0.1 restores collection for Apple's redesigned menu bar. After upgrading, Command-drag the divider, chevron, and collected items into order once. Hidden items move into the system `«` overflow area while collapsed. The native `«` control and the empty span used to displace collected items are expected with this permission-free implementation.
 
 ## Highlights
 

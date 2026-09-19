@@ -6,6 +6,8 @@ Install StatusPerch 1.0.1 or later. macOS 27 changed its menu-bar layout and no 
 
 After updating, hold Command and arrange the bar once from left to right as `items to collect → divider → StatusPerch chevron → clock/frequent items`. Collected items move into macOS 27's system `«` overflow area while collapsed. The `«` control belongs to macOS, not StatusPerch.
 
+The native `«` control and an empty span between it and the StatusPerch chevron are expected: bounded status items occupy that span to move the selected icons into macOS overflow without Screen Recording, Accessibility access, or private APIs. Put the clock, battery, Wi-Fi, and other always-visible items to the right of the StatusPerch chevron so they remain visible.
+
 If you connect a much wider display and collection becomes incomplete, restart StatusPerch so it can allocate the correct number of bounded spacer items.
 
 ## I see more than one StatusPerch in Spotlight

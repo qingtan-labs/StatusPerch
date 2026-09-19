@@ -88,7 +88,7 @@ const copy = {
       'StatusPerch is not notarized yet. Control-click the app, choose Open, then confirm Open. Never disable Gatekeeper.',
     limitsTitle: 'Good to know',
     limitsBody:
-      'On macOS 27, collected items use the system « overflow area. Arrange the controls once after upgrading. Some system icons cannot be moved with Command-drag.',
+      'On macOS 27, collected items use the system « overflow area; the native « and empty displacement span are expected. Arrange the controls once after upgrading.',
     footer: 'A focused macOS utility by qingtan-labs.',
     footerLinks: ['GitHub', 'Releases', 'Privacy'],
   },
@@ -156,7 +156,7 @@ const copy = {
       'StatusPerch 暂未经过 Apple 公证。请按住 Control 点击应用，选择“打开”，再确认“打开”。请勿关闭 Gatekeeper。',
     limitsTitle: '使用须知',
     limitsBody:
-      'macOS 27 会将收纳图标放入系统 « 溢出区域，升级后需重新排列一次控件。部分系统图标不支持按住 Command 拖动。',
+      'macOS 27 会将收纳图标放入系统 « 溢出区域；系统 « 和用于推动图标的空白区域属于正常表现。升级后需重新排列一次控件。',
     footer: 'qingtan-labs 打造的专注型 macOS 工具。',
     footerLinks: ['GitHub', '版本发布', '隐私'],
   },
