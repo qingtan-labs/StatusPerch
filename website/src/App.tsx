@@ -11,9 +11,9 @@ import {
   Languages,
   LockKeyhole,
   MousePointer2,
+  RefreshCw,
   ShieldCheck,
   TimerReset,
-  WifiOff,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -31,7 +31,7 @@ const copy = {
     titleA: 'Make room in your',
     titleB: 'Mac menu bar.',
     intro:
-      'Hide and organize menu bar icons with one click. Lightweight, offline, privacy-friendly, and permission-free.',
+      'Hide and organize menu bar icons with one click. Lightweight, local-first, privacy-friendly, and permission-free.',
     download: 'Download v1.0.1',
     github: 'View on GitHub',
     specs: ['macOS 13+', 'Apple silicon + Intel', 'Free to use'],
@@ -40,7 +40,7 @@ const copy = {
     heroNote: 'Your clock and everyday icons stay visible.',
     heroVisualLabel: 'StatusPerch menu bar before and after illustration',
     principlesLabel: 'Product principles',
-    principles: ['Permission-free', '100% offline', 'Universal 2'],
+    principles: ['Permission-free', 'Local by default', 'Universal 2'],
     showcaseEyebrow: 'Designed for calm',
     showcaseBody:
       'A small utility with a quiet presence — clear enough to trust, subtle enough to live in your menu bar every day.',
@@ -58,11 +58,11 @@ const copy = {
     privacyEyebrow: 'Privacy by design',
     privacyTitle: 'Your menu bar stays yours.',
     privacyIntro:
-      'No screenshots, no cloud account, and no background analytics. StatusPerch only controls its own divider and chevron.',
+      'No screenshots, no cloud account, and no analytics. Menu-bar organization stays local; only transparent update checks connect to GitHub.',
     privacyCards: [
       ['No Screen Recording', 'It never reads or captures your screen.'],
       ['No Accessibility Access', 'No control of other apps or simulated clicks.'],
-      ['No Network Required', 'Your settings stay locally on your Mac.'],
+      ['Transparent Updates', 'Checks GitHub at most weekly or on demand, and can be switched off.'],
     ],
     featureEyebrow: 'Small utility, thoughtful details',
     featureTitle: 'Built to disappear into your workflow.',
@@ -70,7 +70,7 @@ const copy = {
       ['One-click collection', 'Click the chevron to hide or reveal your low-frequency icons.'],
       ['Native ordering', 'Hold Command and drag. Your chosen order is preserved.'],
       ['Auto-hide timer', 'Collapse again after 5, 10, or 30 seconds.'],
-      ['Launch at login', 'Ready when your Mac starts, without opening a window.'],
+      ['Start & stay current', 'Launch at login and check for stable updates weekly or on demand.'],
       ['Language & appearance', 'English, Chinese, Light, and Dark — matched to your Mac.'],
       ['Adjustable range', 'Choose Compact, Standard, or Extended collection on macOS 27.'],
     ],
@@ -92,7 +92,7 @@ const copy = {
     limitsBody:
       'On macOS 27, the native « overflow control may appear. Extended is recommended for complete collection; use Standard or Compact only when a shorter span still hides every selected icon.',
     footer: 'A focused macOS utility by qingtan-labs.',
-    footerLinks: ['GitHub', 'Releases', 'Privacy'],
+    footerLinks: ['GitHub', 'Releases', 'Privacy', 'Report an issue'],
   },
   zh: {
     skip: '跳到主要内容',
@@ -104,7 +104,7 @@ const copy = {
     eyebrow: '给菜单栏留一点呼吸',
     titleA: '让常用图标留下，',
     titleB: '让杂乱安静退场。',
-    intro: '一键收好不常用的菜单栏图标。轻量、离线、不索取系统权限，也不打扰你的工作节奏。',
+    intro: '一键收好不常用的菜单栏图标。轻量、本地优先、不索取系统权限，也不打扰你的工作节奏。',
     download: '下载 v1.0.1',
     github: '前往 GitHub',
     specs: ['macOS 13+', 'Apple 芯片 + Intel', '免费使用'],
@@ -113,7 +113,7 @@ const copy = {
     heroNote: '时钟和常用图标始终保持可见。',
     heroVisualLabel: 'StatusPerch 菜单栏收起前后示意图',
     principlesLabel: '产品原则',
-    principles: ['无需系统权限', '完全离线运行', '双架构支持'],
+    principles: ['无需系统权限', '核心功能本地运行', '双架构支持'],
     showcaseEyebrow: '把秩序藏进细节里',
     showcaseBody:
       '不抢注意力，也不改变习惯。StatusPerch 只在你需要时出现，让每天都要看的菜单栏更清爽一点。',
@@ -130,11 +130,11 @@ const copy = {
     privacyEyebrow: '隐私优先',
     privacyTitle: '安静地工作，\n也认真守护隐私。',
     privacyIntro:
-      '不截屏、不需要云端账户，也没有后台分析。StatusPerch 只控制自己的分隔线和箭头。',
+      '不截屏、不需要云端账户，也没有后台分析。菜单栏收纳始终在本地完成，只有透明的更新检查会连接 GitHub。',
     privacyCards: [
       ['无需屏幕录制', '不会读取或捕获你的屏幕内容。'],
       ['无需辅助功能权限', '不控制其他应用，也不模拟点击。'],
-      ['无需联网', '所有设置仅保存在你的 Mac 本地。'],
+      ['更新透明可控', '最多每周或手动检查一次 GitHub，也可随时关闭。'],
     ],
     featureEyebrow: '小工具，细节不小',
     featureTitle: '轻一点，顺手一点，\n也贴心一点。',
@@ -142,7 +142,7 @@ const copy = {
       ['一键收纳', '单击箭头，收起或展开低频图标。'],
       ['原生排序', '按住 Command 拖动，保留你设定的顺序。'],
       ['自动收起', '展开 5、10 或 30 秒后自动收起。'],
-      ['登录时启动', 'Mac 开机后自动就绪，不弹出多余窗口。'],
+      ['启动与更新', '登录时自动就绪，并可每周或手动检查正式版更新。'],
       ['语言与外观', '中英文、亮色与暗色，都能自然适配你的 Mac。'],
       ['收纳范围可调', 'macOS 27 可选择紧凑、标准或扩展范围。'],
     ],
@@ -162,15 +162,16 @@ const copy = {
     limitsBody:
       'macOS 27 仍可能显示系统 « 溢出按钮；默认推荐“扩展”以确保完整收纳，图标较少时可选择“标准”或“紧凑”来缩短空白。',
     footer: 'qingtan-labs 打造的专注型 macOS 工具。',
-    footerLinks: ['GitHub', '版本发布', '隐私'],
+    footerLinks: ['GitHub', '版本发布', '隐私', '问题反馈'],
   },
 } as const;
 
 const featureIcons = [MousePointer2, Command, TimerReset, Laptop, Languages, Globe2];
-const privacyIcons = [ShieldCheck, LockKeyhole, WifiOff];
+const privacyIcons = [ShieldCheck, LockKeyhole, RefreshCw];
 const downloadUrl =
   'https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg';
 const githubUrl = 'https://github.com/qingtan-labs/StatusPerch';
+const issueUrl = 'https://github.com/qingtan-labs/StatusPerch/issues/new/choose';
 const fazierUrl = 'https://fazier.com';
 const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
 
@@ -287,7 +288,7 @@ export default function App() {
 
       <section className="trust-strip" aria-label={t.principlesLabel}>
         <div><ShieldCheck size={20} /><span>{t.principles[0]}</span></div>
-        <div><WifiOff size={20} /><span>{t.principles[1]}</span></div>
+        <div><RefreshCw size={20} /><span>{t.principles[1]}</span></div>
         <div><Globe2 size={20} /><span>{t.principles[2]}</span></div>
       </section>
 
@@ -392,7 +393,7 @@ export default function App() {
           <div className="download-meta">
             <div><strong>{t.installTitle}</strong><p>{t.installBody}</p></div>
             <div><strong>{t.limitsTitle}</strong><p>{t.limitsBody}</p></div>
-            <code>{t.checksum}: 2230e53e88fff6c9…</code>
+            <code>{t.checksum}: 239ee4ff1cc75bd7…</code>
           </div>
         </div>
       </section>
@@ -408,6 +409,7 @@ export default function App() {
           <a href={githubUrl} target="_blank" rel="noreferrer">{t.footerLinks[0]}</a>
           <a href={`${githubUrl}/releases`} target="_blank" rel="noreferrer">{t.footerLinks[1]}</a>
           <a href="#privacy">{t.footerLinks[2]}</a>
+          <a href={issueUrl} target="_blank" rel="noreferrer">{t.footerLinks[3]}</a>
           <a className="fazier-badge" href={fazierUrl} target="_blank" rel="noreferrer" aria-label="Launched on Fazier">
             <img src="https://fazier.com/api/v1/public/badges/launch_badges.svg?badge_type=launched&theme=neutral" alt="Launched on Fazier" width="130" height="30" />
           </a>

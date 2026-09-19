@@ -38,7 +38,7 @@ StatusPerch is a compact native macOS utility that places a movable boundary in 
 | --- | --- | --- | --- |
 | 1.0.1 | macOS 13 Ventura or later | Apple silicon + Intel (Universal 2) | [StatusPerch-1.0.1-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg) |
 
-SHA-256: `2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
+SHA-256: `239ee4ff1cc75bd7d5b2a8154cacc03e71e24e5931a403ebecade252433eb827`
 
 The checksum is also provided as a separate `SHA256SUMS` file on the [Releases page](https://github.com/qingtan-labs/StatusPerch/releases).
 
@@ -55,7 +55,8 @@ The checksum is also provided as a separate `SHA256SUMS` file on the [Releases p
 - Launch at login with a compatibility fallback for the current build.
 - Follow the system language or choose English / Simplified Chinese.
 - Follow Light or Dark appearance automatically.
-- Run entirely offline without analytics, accounts, Screen Recording, or Accessibility permission.
+- Keep menu-bar organization local with no analytics or accounts; optional weekly update checks can be switched off.
+- Check for stable updates automatically or manually, then download directly without opening a GitHub web page.
 - Native Universal 2 build for Apple silicon and Intel Macs.
 
 ## Quick start
@@ -67,7 +68,7 @@ The checksum is also provided as a separate `SHA256SUMS` file on the [Releases p
 5. Move items you want to collect to the left of the boundary.
 6. Click the chevron to hide or reveal the collected area.
 
-Right-click the chevron to configure collection range, auto-hide, Launch at Login, language, help, or quit.
+Right-click the chevron to configure collection range, auto-hide, Launch at Login, language, software updates, issue reporting, help, or quit.
 
 ![StatusPerch settings and language choices](assets/screenshots/language-settings.svg)
 
@@ -86,7 +87,7 @@ StatusPerch uses the ordering behavior provided by macOS. Some Apple system item
 
 ## Privacy
 
-StatusPerch does not require an account, does not contain analytics, and does not transmit user data. Its core menu-bar organization works without Screen Recording or Accessibility access. Read the full [privacy statement](PRIVACY.md).
+StatusPerch does not require an account or contain analytics. Menu-bar organization stays local and works without Screen Recording or Accessibility access. Its only network feature checks GitHub Releases at most weekly or on demand, and can be disabled. Read the full [privacy statement](PRIVACY.md).
 
 ## About this repository
 
@@ -100,7 +101,7 @@ The StatusPerch application and brand assets are proprietary freeware. You may d
 
 ## 中文简介
 
-StatusPerch 是一款轻量、原生、完全本地运行的 macOS 菜单栏收纳工具。将低频图标放到边界左侧，即可通过箭头一键收起或展开。
+StatusPerch 是一款轻量、原生、本地优先的 macOS 菜单栏收纳工具。将低频图标放到边界左侧，即可通过箭头一键收起或展开；可选择每周或手动检查正式版更新。
 
 - [下载最新版](https://github.com/qingtan-labs/StatusPerch/releases/latest)
 - [简体中文用户手册](docs/user-manual/zh-Hans/README.md)

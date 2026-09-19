@@ -9,5 +9,6 @@ Before opening an issue:
 
 Use the [bug report](https://github.com/qingtan-labs/StatusPerch/issues/new?template=bug_report.yml) or [feature request](https://github.com/qingtan-labs/StatusPerch/issues/new?template=feature_request.yml) form. Do not post passwords, API keys, private screenshots, or security-sensitive details.
 
-Support is provided on a reasonable-effort basis with no guaranteed response time.
+You can also choose **Report an Issue…** in StatusPerch to open these public forms in your default browser. The app does not attach logs, device details, or screenshots automatically.
 
+Support is provided on a reasonable-effort basis with no guaranteed response time.

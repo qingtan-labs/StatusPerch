@@ -10,7 +10,7 @@ No. You perform ordering through the native Command-drag behavior provided by ma
 
 ## Does it connect to the internet?
 
-No. Version 1.0.1 has no account, analytics, advertising, update network client, or cloud service.
+No. Version 1.0.1 has no account, analytics, advertising, or cloud service. Its only network feature is a transparent GitHub Releases update check, limited to once per week and switchable off. Menu-bar organization and preferences stay local.
 
 ## Can it automatically identify and sort other apps' menu-bar items?
 

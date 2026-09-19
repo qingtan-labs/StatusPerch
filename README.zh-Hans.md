@@ -11,7 +11,7 @@
 <p align="center"><strong>让 macOS 菜单栏更安静。</strong></p>
 
 <p align="center">
-  完全本地 · 轻量原生 · 无需隐私权限 · English &amp; 简体中文
+  本地优先 · 轻量原生 · 无需隐私权限 · English &amp; 简体中文
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@ StatusPerch 是一款轻量、原生的 macOS 菜单栏收纳工具。它在菜�
 | --- | --- | --- | --- |
 | 1.0.1 | macOS 13 Ventura 或更高版本 | Apple 芯片 + Intel（Universal 2） | [StatusPerch-1.0.1-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg) |
 
-SHA-256：`2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
+SHA-256：`239ee4ff1cc75bd7d5b2a8154cacc03e71e24e5931a403ebecade252433eb827`
 
 也可从 [Releases 页面](https://github.com/qingtan-labs/StatusPerch/releases)下载独立的 `SHA256SUMS` 校验文件。
 
@@ -55,7 +55,8 @@ SHA-256：`2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
 - 支持登录时自动启动，并为当前版本提供兼容方案。
 - 支持跟随系统、English、简体中文。
 - 自动适配 macOS 亮色与暗色主题。
-- 完全离线运行，不包含统计，不需要账号、屏幕录制或辅助功能权限。
+- 菜单栏收纳完全在本地运行，不包含统计，不需要账号、屏幕录制或辅助功能权限。
+- 默认每周低频检查正式版更新，可关闭，也可随时手动检查并直接下载。
 - Universal 2 原生支持 Apple 芯片和 Intel Mac。
 
 ## 快速上手
@@ -67,7 +68,7 @@ SHA-256：`2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
 5. 将需要收纳的低频图标移动到小竖线左侧。
 6. 单击箭头收起或展开收纳区。
 
-右键箭头可设置收纳范围、自动收起、登录启动、语言、帮助或退出。
+右键箭头可设置收纳范围、自动收起、登录启动、语言、软件更新、问题反馈、帮助或退出。
 
 ![StatusPerch 设置与语言切换示意图](assets/screenshots/language-settings.svg)
 
@@ -86,7 +87,7 @@ StatusPerch 使用 macOS 提供的原生状态栏排列机制。部分 Apple 系
 
 ## 隐私
 
-StatusPerch 不需要账号，不包含统计，也不会传输用户数据。菜单栏收纳核心功能无需“屏幕录制”或“辅助功能”权限。详见[隐私说明](PRIVACY.md#简体中文)。
+StatusPerch 不需要账号，也不包含统计。菜单栏收纳始终在本地完成，无需“屏幕录制”或“辅助功能”权限；唯一的联网功能是最多每周一次或由用户手动触发的 GitHub Releases 更新检查，并可关闭。详见[隐私说明](PRIVACY.md#简体中文)。
 
 ## 关于本仓库
 
