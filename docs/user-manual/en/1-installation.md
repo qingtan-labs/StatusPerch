@@ -8,19 +8,19 @@
 
 ## Download
 
-Download the DMG from the public GitHub Releases page. For 1.0.0, the file is:
+Download the DMG from the public GitHub Releases page. For 1.0.1, the file is:
 
-`StatusPerch-1.0.0-Universal.dmg`
+`StatusPerch-1.0.1-Universal.dmg`
 
 Verify SHA-256 in Terminal if desired:
 
 ```bash
-shasum -a 256 ~/Downloads/StatusPerch-1.0.0-Universal.dmg
+shasum -a 256 ~/Downloads/StatusPerch-1.0.1-Universal.dmg
 ```
 
 Expected checksum:
 
-`b93c55b9448085652b14affcdbb6daa3fb643f82d4d5961f4609b1bede7cb19e`
+`b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
 
 ## Install
 
@@ -31,7 +31,7 @@ Expected checksum:
 
 ## First open for the current unsigned build
 
-Version 1.0.0 is ad-hoc signed but not Apple-notarized. Do not disable Gatekeeper.
+Version 1.0.1 is ad-hoc signed but not Apple-notarized. Do not disable Gatekeeper.
 
 1. Control-click StatusPerch in Applications.
 2. Choose **Open**.
@@ -41,7 +41,7 @@ If macOS does not show the Open option, go to System Settings → Privacy & Secu
 
 ## Upgrade
 
-Quit StatusPerch, then replace the existing application in Applications with the newer one. The stable bundle identifier preserves preferences and status-item positions.
+Quit StatusPerch, then replace the existing application in Applications with the newer one. The stable bundle identifier preserves preferences. On macOS 27, Command-drag the divider, chevron, and collected items into order once after upgrading to 1.0.1.
 
 ## Uninstall
 

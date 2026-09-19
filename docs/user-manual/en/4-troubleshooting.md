@@ -1,5 +1,13 @@
 # Troubleshooting
 
+## Nothing is collected after upgrading to macOS 27
+
+Install StatusPerch 1.0.1 or later. macOS 27 changed its menu-bar layout and no longer accepts the single oversized boundary used by 1.0.0.
+
+After updating, hold Command and arrange the bar once from left to right as `items to collect → divider → StatusPerch chevron → clock/frequent items`. Collected items move into macOS 27's system `«` overflow area while collapsed. The `«` control belongs to macOS, not StatusPerch.
+
+If you connect a much wider display and collection becomes incomplete, restart StatusPerch so it can allocate the correct number of bounded spacer items.
+
 ## I see more than one StatusPerch in Spotlight
 
 Spotlight indexes every `.app` copy, including copies inside build and release staging folders. Keep only `/Applications/StatusPerch.app`; archive installers as DMG files rather than leaving additional app bundles in indexed folders. Close and reopen Spotlight after removing duplicates.
@@ -30,4 +38,3 @@ Move StatusPerch to Applications, then open its menu and toggle Launch at Login.
 ## Diagnostic log
 
 The bounded local log is at `~/Library/Logs/MenuOrganizer/diagnostic.log`. Review it before sharing and remove any personal filesystem information from system error text.
-

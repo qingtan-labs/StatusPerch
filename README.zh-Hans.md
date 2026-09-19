@@ -36,13 +36,15 @@ StatusPerch 是一款轻量、原生的 macOS 菜单栏收纳工具。它在菜�
 
 | 版本 | 系统要求 | 架构 | 安装包 |
 | --- | --- | --- | --- |
-| 1.0.0 | macOS 13 Ventura 或更高版本 | Apple 芯片 + Intel（Universal 2） | [StatusPerch-1.0.0-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.0/StatusPerch-1.0.0-Universal.dmg) |
+| 1.0.1 | macOS 13 Ventura 或更高版本 | Apple 芯片 + Intel（Universal 2） | [StatusPerch-1.0.1-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg) |
 
-SHA-256：`b93c55b9448085652b14affcdbb6daa3fb643f82d4d5961f4609b1bede7cb19e`
+SHA-256：`b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
 
 也可从 [Releases 页面](https://github.com/qingtan-labs/StatusPerch/releases)下载独立的 `SHA256SUMS` 校验文件。
 
-> **当前签名状态：** 1.0.0 使用临时签名，尚未经过 Apple 公证。首次运行时，请在“应用程序”中按住 Control 点击 StatusPerch，然后选择“打开”。不要关闭 Gatekeeper。详见[安全安装指南](docs/user-manual/zh-Hans/1-installation.md)。
+> **当前签名状态：** 1.0.1 使用临时签名，尚未经过 Apple 公证。首次运行时，请在“应用程序”中按住 Control 点击 StatusPerch，然后选择“打开”。不要关闭 Gatekeeper。详见[安全安装指南](docs/user-manual/zh-Hans/1-installation.md)。
+
+> **macOS 27：** 1.0.1 已适配苹果重新设计的菜单栏。升级后请按住 Command，将小竖线、箭头和待收纳图标重新排列一次；收起时图标会进入系统 `«` 溢出区域。
 
 ## 主要功能
 
@@ -79,7 +81,7 @@ StatusPerch 使用 macOS 提供的原生状态栏排列机制。部分 Apple 系
 - [安全政策](SECURITY.md)
 - [支持说明](SUPPORT.md)
 - [更新记录](CHANGELOG.md)
-- [1.0.0 发布说明](docs/release-notes/v1.0.0.md)
+- [1.0.1 发布说明](docs/release-notes/v1.0.1.md)
 
 ## 隐私
 

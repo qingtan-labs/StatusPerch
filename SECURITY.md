@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-Security fixes are provided for the latest published version when practical. Currently supported: **1.0.0**.
+Security fixes are provided for the latest published version when practical. Currently supported: **1.0.1**.
 
 ## Reporting a vulnerability
 
@@ -11,4 +11,3 @@ Please do not disclose exploitable details, personal information, or secrets in 
 Include the affected version, macOS version, Mac architecture, reproduction conditions, and likely impact. qingtan-labs will acknowledge a complete report as soon as reasonably possible and coordinate disclosure after assessment.
 
 For ordinary bugs without security impact, use the public bug report template.
-

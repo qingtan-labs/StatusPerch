@@ -10,17 +10,17 @@
 
 从公共 GitHub Releases 页面下载：
 
-`StatusPerch-1.0.0-Universal.dmg`
+`StatusPerch-1.0.1-Universal.dmg`
 
 可在终端验证 SHA-256：
 
 ```bash
-shasum -a 256 ~/Downloads/StatusPerch-1.0.0-Universal.dmg
+shasum -a 256 ~/Downloads/StatusPerch-1.0.1-Universal.dmg
 ```
 
 正确结果：
 
-`b93c55b9448085652b14affcdbb6daa3fb643f82d4d5961f4609b1bede7cb19e`
+`b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
 
 ## 安装
 
@@ -39,7 +39,7 @@ shasum -a 256 ~/Downloads/StatusPerch-1.0.0-Universal.dmg
 
 ## 升级
 
-先退出 StatusPerch，再用新版本替换“应用程序”中的旧版本。稳定的 bundle identifier 会保留设置和菜单栏位置。
+先退出 StatusPerch，再用新版本替换“应用程序”中的旧版本。稳定的 bundle identifier 会保留设置。macOS 27 用户升级到 1.0.1 后，请按住 Command，将小竖线、箭头和待收纳图标重新排列一次。
 
 ## 卸载
 

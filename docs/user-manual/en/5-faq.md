@@ -10,7 +10,7 @@ No. You perform ordering through the native Command-drag behavior provided by ma
 
 ## Does it connect to the internet?
 
-No. Version 1.0.0 has no account, analytics, advertising, update network client, or cloud service.
+No. Version 1.0.1 has no account, analytics, advertising, update network client, or cloud service.
 
 ## Can it automatically identify and sort other apps' menu-bar items?
 
@@ -31,4 +31,3 @@ StatusPerch is a menu-bar accessory. Use its chevron or divider to open settings
 ## Is it open source?
 
 No. The public repository contains documentation and release binaries only. The application and brand are proprietary freeware.
-

@@ -30,7 +30,7 @@ const copy = {
     titleB: 'Mac menu bar.',
     intro:
       'Hide and organize menu bar icons with one click. Lightweight, offline, privacy-friendly, and permission-free.',
-    download: 'Download v1.0.0',
+    download: 'Download v1.0.1',
     github: 'View on GitHub',
     specs: ['macOS 13+', 'Apple silicon + Intel', 'Free to use'],
     before: 'Before',
@@ -88,7 +88,7 @@ const copy = {
       'StatusPerch is not notarized yet. Control-click the app, choose Open, then confirm Open. Never disable Gatekeeper.',
     limitsTitle: 'Good to know',
     limitsBody:
-      'Some macOS system icons cannot be moved with Command-drag. StatusPerch uses the native menu bar and does not create a second row.',
+      'On macOS 27, collected items use the system « overflow area. Arrange the controls once after upgrading. Some system icons cannot be moved with Command-drag.',
     footer: 'A focused macOS utility by qingtan-labs.',
     footerLinks: ['GitHub', 'Releases', 'Privacy'],
   },
@@ -101,7 +101,7 @@ const copy = {
     titleA: '让常用图标留下，',
     titleB: '让杂乱安静退场。',
     intro: '一键收好不常用的菜单栏图标。轻量、离线、不索取系统权限，也不打扰你的工作节奏。',
-    download: '下载 v1.0.0',
+    download: '下载 v1.0.1',
     github: '前往 GitHub',
     specs: ['macOS 13+', 'Apple 芯片 + Intel', '免费使用'],
     before: '收起前',
@@ -156,7 +156,7 @@ const copy = {
       'StatusPerch 暂未经过 Apple 公证。请按住 Control 点击应用，选择“打开”，再确认“打开”。请勿关闭 Gatekeeper。',
     limitsTitle: '使用须知',
     limitsBody:
-      '部分 macOS 系统图标不支持按住 Command 拖动。StatusPerch 使用原生菜单栏，不会创建第二行菜单栏。',
+      'macOS 27 会将收纳图标放入系统 « 溢出区域，升级后需重新排列一次控件。部分系统图标不支持按住 Command 拖动。',
     footer: 'qingtan-labs 打造的专注型 macOS 工具。',
     footerLinks: ['GitHub', '版本发布', '隐私'],
   },
@@ -165,7 +165,7 @@ const copy = {
 const featureIcons = [MousePointer2, Command, TimerReset, Laptop, Languages, Globe2];
 const privacyIcons = [ShieldCheck, LockKeyhole, WifiOff];
 const downloadUrl =
-  'https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.0/StatusPerch-1.0.0-Universal.dmg';
+  'https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg';
 const githubUrl = 'https://github.com/qingtan-labs/StatusPerch';
 const fazierUrl = 'https://fazier.com';
 const asset = (name: string) => `${import.meta.env.BASE_URL}${name}`;
@@ -372,7 +372,7 @@ export default function App() {
               <p>{t.downloadIntro}</p>
               <div className="download-actions">
                 <a className="button white" href={downloadUrl}><Download size={18} />{t.getDmg}</a>
-                <a className="text-link" href={`${githubUrl}/releases/tag/v1.0.0`} target="_blank" rel="noreferrer">
+                <a className="text-link" href={`${githubUrl}/releases/tag/v1.0.1`} target="_blank" rel="noreferrer">
                   {t.releaseNotes} <ArrowRight size={15} />
                 </a>
               </div>
@@ -381,7 +381,7 @@ export default function App() {
           <div className="download-meta">
             <div><strong>{t.installTitle}</strong><p>{t.installBody}</p></div>
             <div><strong>{t.limitsTitle}</strong><p>{t.limitsBody}</p></div>
-            <code>{t.checksum}: b93c55b944808565…</code>
+            <code>{t.checksum}: b06f7b09f0571598…</code>
           </div>
         </div>
       </section>

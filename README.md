@@ -36,13 +36,15 @@ StatusPerch is a compact native macOS utility that places a movable boundary in 
 
 | Version | System | Architecture | Installer |
 | --- | --- | --- | --- |
-| 1.0.0 | macOS 13 Ventura or later | Apple silicon + Intel (Universal 2) | [StatusPerch-1.0.0-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.0/StatusPerch-1.0.0-Universal.dmg) |
+| 1.0.1 | macOS 13 Ventura or later | Apple silicon + Intel (Universal 2) | [StatusPerch-1.0.1-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg) |
 
-SHA-256: `b93c55b9448085652b14affcdbb6daa3fb643f82d4d5961f4609b1bede7cb19e`
+SHA-256: `b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
 
 The checksum is also provided as a separate `SHA256SUMS` file on the [Releases page](https://github.com/qingtan-labs/StatusPerch/releases).
 
-> **Current signing status:** 1.0.0 is ad-hoc signed but not Apple-notarized. For the first launch, Control-click StatusPerch in Applications and choose **Open**. Never disable Gatekeeper. See the [safe installation guide](docs/user-manual/en/1-installation.md).
+> **Current signing status:** 1.0.1 is ad-hoc signed but not Apple-notarized. For the first launch, Control-click StatusPerch in Applications and choose **Open**. Never disable Gatekeeper. See the [safe installation guide](docs/user-manual/en/1-installation.md).
+
+> **macOS 27:** Version 1.0.1 restores collection for Apple's redesigned menu bar. After upgrading, Command-drag the divider, chevron, and collected items into order once. Hidden items move into the system `«` overflow area while collapsed.
 
 ## Highlights
 
@@ -79,7 +81,7 @@ StatusPerch uses the ordering behavior provided by macOS. Some Apple system item
 - [Security policy](SECURITY.md)
 - [Support](SUPPORT.md)
 - [Changelog](CHANGELOG.md)
-- [1.0.0 release notes](docs/release-notes/v1.0.0.md)
+- [1.0.1 release notes](docs/release-notes/v1.0.1.md)
 
 ## Privacy
 
@@ -104,4 +106,4 @@ StatusPerch 是一款轻量、原生、完全本地运行的 macOS 菜单栏收�
 - [安全安装说明](docs/user-manual/zh-Hans/1-installation.md)
 - [隐私说明](PRIVACY.md#简体中文)
 
-1.0.0 尚未经过 Apple 公证，首次运行请在“应用程序”中按住 Control 点击 StatusPerch，然后选择“打开”；不要关闭 Gatekeeper。
+1.0.1 尚未经过 Apple 公证，首次运行请在“应用程序”中按住 Control 点击 StatusPerch，然后选择“打开”；不要关闭 Gatekeeper。macOS 27 用户升级后需按住 Command 重新排列一次小竖线、箭头和待收纳图标。
