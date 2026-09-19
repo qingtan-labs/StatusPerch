@@ -20,7 +20,7 @@ shasum -a 256 ~/Downloads/StatusPerch-1.0.1-Universal.dmg
 
 正确结果：
 
-`b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
+`2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
 
 ## 安装
 

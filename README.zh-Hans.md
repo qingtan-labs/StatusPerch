@@ -38,18 +38,19 @@ StatusPerch 是一款轻量、原生的 macOS 菜单栏收纳工具。它在菜�
 | --- | --- | --- | --- |
 | 1.0.1 | macOS 13 Ventura 或更高版本 | Apple 芯片 + Intel（Universal 2） | [StatusPerch-1.0.1-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg) |
 
-SHA-256：`b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
+SHA-256：`2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
 
 也可从 [Releases 页面](https://github.com/qingtan-labs/StatusPerch/releases)下载独立的 `SHA256SUMS` 校验文件。
 
 > **当前签名状态：** 1.0.1 使用临时签名，尚未经过 Apple 公证。首次运行时，请在“应用程序”中按住 Control 点击 StatusPerch，然后选择“打开”。不要关闭 Gatekeeper。详见[安全安装指南](docs/user-manual/zh-Hans/1-installation.md)。
 
-> **macOS 27：** 1.0.1 已适配苹果重新设计的菜单栏。升级后请按住 Command，将小竖线、箭头和待收纳图标重新排列一次；收起时图标会进入系统 `«` 溢出区域。系统 `«` 控件以及用于推动收纳图标的空白区域，是当前免权限实现的正常表现。
+> **macOS 27：** 1.0.1 已适配苹果重新设计的菜单栏。升级后请按住 Command，将小竖线、箭头和待收纳图标重新排列一次；收起时图标会进入系统 `«` 溢出区域。默认推荐“扩展”以确保完整收纳；图标较少时可选择“标准”或“紧凑”来缩短空白。
 
 ## 主要功能
 
 - 一键收起与展开低频菜单栏图标。
 - 按住 Command 拖动 StatusPerch 和其他兼容的状态栏图标进行排列。
+- macOS 27 可选择“紧凑、标准、扩展”三档收纳范围。
 - 支持展开后 5、10、30 秒自动收起。
 - 支持登录时自动启动，并为当前版本提供兼容方案。
 - 支持跟随系统、English、简体中文。
@@ -66,7 +67,7 @@ SHA-256：`b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
 5. 将需要收纳的低频图标移动到小竖线左侧。
 6. 单击箭头收起或展开收纳区。
 
-右键箭头可设置自动收起、登录启动、语言、帮助或退出。
+右键箭头可设置收纳范围、自动收起、登录启动、语言、帮助或退出。
 
 ![StatusPerch 设置与语言切换示意图](assets/screenshots/language-settings.svg)
 

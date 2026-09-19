@@ -21,6 +21,8 @@ type Language = 'en' | 'zh';
 
 const copy = {
   en: {
+    skip: 'Skip to main content',
+    homeLabel: 'StatusPerch home',
     nav: ['How it works', 'Privacy', 'Features', 'Download'],
     navLabel: 'Primary navigation',
     lang: '中文',
@@ -69,8 +71,8 @@ const copy = {
       ['Native ordering', 'Hold Command and drag. Your chosen order is preserved.'],
       ['Auto-hide timer', 'Collapse again after 5, 10, or 30 seconds.'],
       ['Launch at login', 'Ready when your Mac starts, without opening a window.'],
-      ['English & Chinese', 'Follow macOS or choose a language manually.'],
-      ['Light & dark', 'Designed to feel at home in either appearance.'],
+      ['Language & appearance', 'English, Chinese, Light, and Dark — matched to your Mac.'],
+      ['Adjustable range', 'Choose Compact, Standard, or Extended collection on macOS 27.'],
     ],
     languageTitle: 'Made for more than one language.',
     languageBody:
@@ -88,11 +90,13 @@ const copy = {
       'StatusPerch is not notarized yet. Control-click the app, choose Open, then confirm Open. Never disable Gatekeeper.',
     limitsTitle: 'Good to know',
     limitsBody:
-      'On macOS 27, collected items use the system « overflow area; the native « and empty displacement span are expected. Arrange the controls once after upgrading.',
+      'On macOS 27, the native « overflow control may appear. Extended is recommended for complete collection; use Standard or Compact only when a shorter span still hides every selected icon.',
     footer: 'A focused macOS utility by qingtan-labs.',
     footerLinks: ['GitHub', 'Releases', 'Privacy'],
   },
   zh: {
+    skip: '跳到主要内容',
+    homeLabel: 'StatusPerch 首页',
     nav: ['使用方法', '隐私', '功能', '下载'],
     navLabel: '主要导航',
     lang: 'English',
@@ -139,8 +143,8 @@ const copy = {
       ['原生排序', '按住 Command 拖动，保留你设定的顺序。'],
       ['自动收起', '展开 5、10 或 30 秒后自动收起。'],
       ['登录时启动', 'Mac 开机后自动就绪，不弹出多余窗口。'],
-      ['中英文切换', '可跟随 macOS，也可手动指定语言。'],
-      ['亮色与暗色', '自动适配系统外观，始终自然清晰。'],
+      ['语言与外观', '中英文、亮色与暗色，都能自然适配你的 Mac。'],
+      ['收纳范围可调', 'macOS 27 可选择紧凑、标准或扩展范围。'],
     ],
     languageTitle: '面向全球用户的语言体验。',
     languageBody: '网站默认使用英文，应用既能跟随 Mac，也可以记住你手动选择的语言。',
@@ -156,7 +160,7 @@ const copy = {
       'StatusPerch 暂未经过 Apple 公证。请按住 Control 点击应用，选择“打开”，再确认“打开”。请勿关闭 Gatekeeper。',
     limitsTitle: '使用须知',
     limitsBody:
-      'macOS 27 会将收纳图标放入系统 « 溢出区域；系统 « 和用于推动图标的空白区域属于正常表现。升级后需重新排列一次控件。',
+      'macOS 27 仍可能显示系统 « 溢出按钮；默认推荐“扩展”以确保完整收纳，图标较少时可选择“标准”或“紧凑”来缩短空白。',
     footer: 'qingtan-labs 打造的专注型 macOS 工具。',
     footerLinks: ['GitHub', '版本发布', '隐私'],
   },
@@ -208,18 +212,23 @@ export default function App() {
   };
 
   return (
-    <main className={`site-page ${language === 'zh' ? 'is-zh' : 'is-en'}`}>
+    <div className={`site-page ${language === 'zh' ? 'is-zh' : 'is-en'}`}>
+      <a className="skip-link" href="#content">{t.skip}</a>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="StatusPerch home">
+        <a className="brand" href="#top" aria-label={t.homeLabel}>
           <img src={asset('statusperch-icon.png')} alt="" width="512" height="512" />
           <span>StatusPerch</span>
         </a>
         <nav aria-label={t.navLabel}>
-          {t.nav.map((item, index) => (
-            <a key={item} href={`#${['how', 'privacy', 'features', 'download'][index]}`}>
-              {item}
-            </a>
-          ))}
+          <ul>
+            {t.nav.map((item, index) => (
+              <li key={item}>
+                <a href={`#${['how', 'privacy', 'features', 'download'][index]}`}>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
         </nav>
         <button
           className="language-button"
@@ -231,6 +240,8 @@ export default function App() {
           {t.lang}
         </button>
       </header>
+
+      <main id="content" tabIndex={-1}>
 
       <section className="hero section-shell" id="top">
         <div className="hero-copy">
@@ -245,12 +256,12 @@ export default function App() {
               <CodeXml size={18} />{t.github}
             </a>
           </div>
-          <ul className="spec-list">
+          <ul className="spec-list" role="list">
             {t.specs.map((spec) => <li key={spec}><Check size={15} />{spec}</li>)}
           </ul>
         </div>
 
-        <div className="hero-visual" aria-label={t.heroVisualLabel}>
+        <div className="hero-visual" role="img" aria-label={t.heroVisualLabel}>
           <div className="visual-glow" />
           <div className="mac-window">
             <div className="window-top">
@@ -269,7 +280,7 @@ export default function App() {
             </div>
           </div>
           <div className="floating-icon">
-            <img src={asset('statusperch-icon.png')} alt="StatusPerch app icon" width="512" height="512" />
+            <img src={asset('statusperch-icon.png')} alt="" width="512" height="512" />
           </div>
         </div>
       </section>
@@ -283,7 +294,7 @@ export default function App() {
       <section className="brand-showcase section-shell" aria-labelledby="brand-showcase-title">
         <div className="brand-showcase-copy">
           <p className="eyebrow"><span />{t.showcaseEyebrow}</p>
-          <p id="brand-showcase-title">{t.showcaseBody}</p>
+          <h2 id="brand-showcase-title">{t.showcaseBody}</h2>
         </div>
         <div className="brand-showcase-frame">
           <img src={asset('og.png')} alt={t.showcaseAlt} width="1280" height="640" />
@@ -381,10 +392,11 @@ export default function App() {
           <div className="download-meta">
             <div><strong>{t.installTitle}</strong><p>{t.installBody}</p></div>
             <div><strong>{t.limitsTitle}</strong><p>{t.limitsBody}</p></div>
-            <code>{t.checksum}: b06f7b09f0571598…</code>
+            <code>{t.checksum}: 2230e53e88fff6c9…</code>
           </div>
         </div>
       </section>
+      </main>
 
       <footer className="site-footer section-shell">
         <div className="brand">
@@ -401,6 +413,6 @@ export default function App() {
           </a>
         </div>
       </footer>
-    </main>
+    </div>
   );
 }

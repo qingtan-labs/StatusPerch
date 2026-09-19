@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --bg: #f4f0e8;
   --surface: #fffdf8;
   --surface-soft: #ede6dc;
@@ -31,6 +32,14 @@ img { display: block; max-width: 100%; height: auto; }
 section[id] { scroll-margin-top: 100px; }
 :focus-visible { outline: 3px solid color-mix(in srgb, var(--cyan) 72%, white); outline-offset: 4px; }
 
+.skip-link {
+  position: fixed; top: 12px; left: 12px; z-index: 100;
+  padding: 10px 14px; border-radius: 10px; color: #fff; background: var(--navy);
+  font-size: 13px; font-weight: 700; transform: translateY(-160%);
+  transition: transform .18s ease;
+}
+.skip-link:focus { transform: translateY(0); }
+
 .site-page { overflow: clip; }
 .section-shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 .site-header {
@@ -43,7 +52,7 @@ section[id] { scroll-margin-top: 100px; }
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 760; letter-spacing: -.02em; }
 .brand img { width: 34px; height: 34px; aspect-ratio: 1; object-fit: cover; border-radius: 9px; box-shadow: 0 5px 12px rgba(10, 17, 28, .16); }
-.site-header nav { display: flex; align-items: center; gap: 30px; font-size: 13px; font-weight: 650; color: var(--muted); }
+.site-header nav ul { display: flex; align-items: center; gap: 30px; margin: 0; padding: 0; list-style: none; font-size: 13px; font-weight: 650; color: var(--muted); }
 .site-header nav a { transition: color .18s ease; }
 .site-header nav a:hover { color: var(--ink); }
 .language-button {
@@ -101,7 +110,7 @@ section[id] { scroll-margin-top: 100px; }
 .trust-strip svg { color: var(--cyan); }
 
 .brand-showcase { display: grid; grid-template-columns: .56fr 1.44fr; align-items: center; gap: 60px; padding-block: 112px 30px; }
-.brand-showcase-copy > p:last-child { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; }
+.brand-showcase-copy h2 { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.75; font-weight: 500; letter-spacing: 0; }
 .brand-showcase-frame { position: relative; padding: 10px; overflow: hidden; border: 1px solid var(--line); border-radius: 27px; background: color-mix(in srgb, var(--surface) 92%, transparent); box-shadow: 0 24px 65px rgba(47,41,34,.12); }
 .brand-showcase-frame::after { content: ''; position: absolute; inset: auto 12% -20px; height: 40px; border-radius: 50%; background: rgba(24,185,223,.2); filter: blur(24px); }
 .brand-showcase-frame img { position: relative; z-index: 1; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: 19px; }

@@ -38,18 +38,19 @@ StatusPerch is a compact native macOS utility that places a movable boundary in 
 | --- | --- | --- | --- |
 | 1.0.1 | macOS 13 Ventura or later | Apple silicon + Intel (Universal 2) | [StatusPerch-1.0.1-Universal.dmg](https://github.com/qingtan-labs/StatusPerch/releases/download/v1.0.1/StatusPerch-1.0.1-Universal.dmg) |
 
-SHA-256: `b06f7b09f057159833c994b9741dbe89c780f8cd3ed1c0d899455735b4958f40`
+SHA-256: `2230e53e88fff6c9c7bec37f6b4b4163e0df606ace475d29472461e00ecaa575`
 
 The checksum is also provided as a separate `SHA256SUMS` file on the [Releases page](https://github.com/qingtan-labs/StatusPerch/releases).
 
 > **Current signing status:** 1.0.1 is ad-hoc signed but not Apple-notarized. For the first launch, Control-click StatusPerch in Applications and choose **Open**. Never disable Gatekeeper. See the [safe installation guide](docs/user-manual/en/1-installation.md).
 
-> **macOS 27:** Version 1.0.1 restores collection for Apple's redesigned menu bar. After upgrading, Command-drag the divider, chevron, and collected items into order once. Hidden items move into the system `«` overflow area while collapsed. The native `«` control and the empty span used to displace collected items are expected with this permission-free implementation.
+> **macOS 27:** Version 1.0.1 restores collection for Apple's redesigned menu bar. After upgrading, Command-drag the divider, chevron, and collected items into order once. Hidden items move into the system `«` overflow area while collapsed. Extended is the recommended default for complete collection; Standard and Compact are optional shorter ranges for smaller icon groups.
 
 ## Highlights
 
 - Hide and reveal low-frequency menu-bar items with one click.
 - Reorder StatusPerch and other compatible status items using Command-drag.
+- Choose Compact, Standard, or Extended collection range on macOS 27.
 - Automatically hide after 5, 10, or 30 seconds.
 - Launch at login with a compatibility fallback for the current build.
 - Follow the system language or choose English / Simplified Chinese.
@@ -66,7 +67,7 @@ The checksum is also provided as a separate `SHA256SUMS` file on the [Releases p
 5. Move items you want to collect to the left of the boundary.
 6. Click the chevron to hide or reveal the collected area.
 
-Right-click the chevron to configure auto-hide, Launch at Login, language, help, or quit.
+Right-click the chevron to configure collection range, auto-hide, Launch at Login, language, help, or quit.
 
 ![StatusPerch settings and language choices](assets/screenshots/language-settings.svg)
 

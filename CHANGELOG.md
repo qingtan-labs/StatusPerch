@@ -7,6 +7,8 @@ All notable public changes to StatusPerch are documented here.
 - Restored menu-bar collection on macOS 27 using bounded native status items compatible with the new layout.
 - Added support for wide and mixed-display setups without Screen Recording, Accessibility access, or private APIs.
 - Added a one-time bilingual upgrade guide for arranging the divider and chevron on macOS 27.
+- Added Compact, Standard, and Extended collection ranges; Extended is the recommended default for complete collection, while the shorter ranges remain optional.
+- Added a visual arrangement guide and a restart prompt for newly connected wider displays.
 - Kept the existing behavior unchanged on macOS 13–26.
 
 See the [full 1.0.1 release notes](docs/release-notes/v1.0.1.md).
